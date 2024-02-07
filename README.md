@@ -1,2 +1,3 @@
 # Reptes_JavaScript 
-mkdir readme.ssh
+Projecte de Tutoria JavaScript.
+
