@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrel Cuadradra de la resta entre dos numeros</title>
+    <script>
+        function ArrelQuadradaNumerosRestats() {
+            var num1 = parseInt(document.getElementById("num1").value);
+            var num2 = parseInt(document.getElementById("num2").value);
+            var num3 = num1 - num2;
+            
+            var resultados = document.getElementById("resultados");
+            
+            if (num3 < 0) {
+                resultados.textContent = "La diferencia entre los números es negativa, la raíz cuadrada no es válida.";
+            } else {
+                resultados.textContent = "La raíz cuadrada de la diferencia es: " + Math.sqrt(num3);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>La Arrel Cuadrada Entre Aquests Dos Numeros Restats</h1>
+    <p>Inserteix els dos numeros a continuacio</p>
+    <label for="num1">Primer numero:</label>
+    <input type="number" id="num1"><br><br>
+    <label for="num2">Segon numero:</label>
+    <input type="number" id="num2"><br><br>
+    <button onclick="ArrelQuadradaNumerosRestats()">Raiz cuadrada de la resta de los numeros</button><br><br>
+    <div id="resultados"></div>
+</body>
+
+</html>
