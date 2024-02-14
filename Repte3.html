@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Color de Texto</title>
+    <style>
+        /* Estilo inicial del div */
+        #miDiv {
+            background-color: blue;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <!-- Div con id "miDiv" -->
+    <div id="miDiv"><span>HOLA MUNDO!!!</span></div>
+    <!-- Botón que llama a la función cambiarColor() -->
+    <button onclick="cambiarRojo()">Cambiar a Rojo</button>  <button onclick="cambiarVerde()">Cambiar a Verde</button>
+
+    <script>
+        // Función para cambiar el color del texto dentro del div
+        function cambiarRojo() {
+            // Obtener el elemento div por su id "miDiv"
+            var div = document.getElementById("miDiv");
+            // Cambiar el color del texto del div a rojo
+            div.style.color = "red";
+        }
+        function cambiarVerde() {
+            // Obtener el elemento div por su id "miDiv"
+            var div = document.getElementById("miDiv");
+            // Cambiar el color del texto del div a rojo
+            div.style.color = "green";
+        }
+    </script>
+</body>
+</html>
