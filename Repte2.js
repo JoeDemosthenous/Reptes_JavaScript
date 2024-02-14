@@ -1,4 +1,7 @@
 //Escriu un programa que demani una frase i escrigui quants cops apareixen cadascuna de les vocals.
+var frase = prompt("Por favor, escribe una frase en JavaScript:");
+
+
 function contarVocales(frase) {
     // Convertir la frase a minúsculas para hacer la búsqueda de vocales insensible a mayúsculas/minúsculas
     frase = frase.toLowerCase();

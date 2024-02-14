@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="resultados"></div>
+    <script>
+        // Solicitar al usuario que ingrese una frase
+        var fraseUsuario = prompt("Por favor, ingresa una frase:");
+
+        function contarVocales(frase) {
+            // Convertir la frase a minúsculas para hacer la búsqueda de vocales insensible a mayúsculas/minúsculas
+            frase = frase.toLowerCase();
+
+            // Definir un objeto para almacenar el recuento de cada vocal
+            var contadorVocales = {
+                'a': 0,
+                'e': 0,
+                'i': 0,
+                'o': 0,
+                'u': 0
+            };
+
+            // Recorrer cada letra de la frase
+            for (var i = 0; i < frase.length; i++) {
+                var letra = frase[i];
+                // Verificar si la letra es una vocal y actualizar el contador correspondiente
+                if (letra === 'a' || letra === 'e' || letra === 'i' || letra === 'o' || letra === 'u') {
+                    contadorVocales[letra]++;
+                }
+            }
+
+            // Imprimir los resultados
+            document.getElementById("resultados").innerHTML = "Número de veces que aparece cada vocal:<br>";
+            document.getElementById("resultados").innerHTML += "A: " + contadorVocales['a'] + "<br>";
+            document.getElementById("resultados").innerHTML += "E: " + contadorVocales['e'] + "<br>";
+            document.getElementById("resultados").innerHTML += "I: " + contadorVocales['i'] + "<br>";
+            document.getElementById("resultados").innerHTML += "O: " + contadorVocales['o'] + "<br>";
+            document.getElementById("resultados").innerHTML += "U: " + contadorVocales['u'] + "<br>";
+        }
+
+        // Llamar a la función contarVocales con la frase proporcionada por el usuario
+        contarVocales(fraseUsuario);
+    </script>
+</body>
+</html>
