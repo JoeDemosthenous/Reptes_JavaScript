@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Common Divisors Finder</title>
+<script>
+function encontrarDivisoresComunes(numero1, numero2) {
+    var divisoresComunes = [];
+    
+    // Encontrar los divisores del primer número
+    for (var i = 1; i <= numero1; i++) {
+        if (numero1 % i === 0) {
+            // Si es un divisor del primer número, comprobar si también es divisor del segundo número
+            if (numero2 % i === 0) {
+                divisoresComunes.push(i);
+            }
+        }
+    }
+    
+    return divisoresComunes;
+}
+function encontrarYMostrarDivisores() {
+    // Obtener los números ingresados por el usuario
+    var num1 = parseInt(document.getElementById("num1").value);
+    var num2 = parseInt(document.getElementById("num2").value);
+
+    // Encontrar los divisores comunes
+    var divisores = encontrarDivisoresComunes(num1, num2);
+
+    // Mostrar los divisores comunes en el área de resultados
+    var resultados = document.getElementById("resultados");
+    if (divisores.length === 0) {
+        resultados.textContent = "Los números no tienen divisores comunes.";
+    } else {
+        resultados.textContent = "Los divisores comunes de " + num1 + " y " + num2 + " son: " + divisores.join(", ");
+    }
+}
+</script>
+</head>
+<body>
+<h1>Common Divisors Finder</h1>
+<p>Enter two numbers below to find their common divisors:</p>
+<label for="num1">First number:</label>
+<input type="number" id="num1"><br><br>
+<label for="num2">Second number:</label>
+<input type="number" id="num2"><br><br>
+<button onclick="encontrarYMostrarDivisores()">Find Common Divisors</button><br><br>
+<div id="resultados"></div>
+</body>
+</html>
